@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha's Portfolio</title>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-4UCU3xP6p1oyEevZ9dzXVwK0L8v6cqZ4A5PoW5aqHJ4rshgDUK54MBSafZAV4+tpJ8WgORc0+PfM6IxlCdz1Tg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+
+    nav {
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        font-family: "Playfair Display", serif;
+    }
+
+    nav ul li {
+        margin: 0 23px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.04em;
+    }
+
+    .left {
+        font-size: 1.9em;
+    }
+
+    .hero {
+        background-image: url("./ChatGPT Image Jun 18, 2025, 04_07_13 PM.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero-first {
+        position: absolute;
+        z-index: 1;
+        font-family: "Playfair Display", serif;
+        font-size: 50px;
+        text-align: center;
+        color: white;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-img {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-img img {
+        max-height: 80vh;
+        height: auto;
+        width: auto;
+    }
+
+    .hero-second {
+        position: absolute;
+        bottom: 20px;
+        z-index: 3;
+        font-family: "Playfair Display", serif;
+        font-size: 40px;
+        text-align: center;
+        color: white;
+    }
+
+    .second {
+        height: 60vh;
+    }
+
+    .About {
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        margin: 20px 50px;
+    }
+
+    .About h1 {
+        font-size: 28px;
+        color: black;
+        margin-bottom: 15px;
+
+    }
+
+    .About p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        text-align: justify;
+    }
+
+    .work {
+
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        margin: 20px 50px;
+
+    }
+
+    .green {
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }
+
+    .green hr {
+        border: 1px solid black;
+        margin: 0 50px;
+        height: 110px;
+    }
+
+    .third {
+        height: 180vh;
+        background-color: #101010;
+
+        color: white;
+        text-align: center;
+    }
+
+    .service-cards h1 {
+        font-size: 3.5em;
+        margin-top: 40px;
+        color: #f1f1f1;
+        font-family: "Outfit", sans-serif;
+    }
+
+    .service-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+    }
+
+    .png_img {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+
+        height: 50vh;
+    }
+
+    .png_img img {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .png_img hr {
+        height: 40vh;
+        border: none;
+        border-left: 2px solid #f1f1f1;
+
+        margin: 0 10px;
+
+    }
+
+    .ser_content {
+        height: 50vh;
+        width: 40vh;
+        text-align: left;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.4em;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .four {
+        background-color: #f5f5f5;
+        color: #222;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .Projects h1 {
+        font-size: 3em;
+        margin-bottom: 40px;
+        font-family: 'Playfair Display', serif;
+        color: #222;
+        position: relative;
+    }
+
+    .table {
+        overflow-x: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    thead th {
+        padding: 16px;
+        background-color: #eaeaea;
+        color: #000;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ccc;
+    }
+
+    tbody td {
+        padding: 18px 15px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        font-size: 0.95em;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    tbody tr:hover {
+        background-color: #f9f9f9;
+        transition: background 0.3s ease;
+    }
+
+    td img {
+        width: 28px;
+        transition: transform 0.3s ease;
+    }
+
+    td a:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Responsive (Mobile View) */
+    @media screen and (max-width: 768px) {
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        thead {
+            display: none;
+        }
+
+        tbody td {
+            padding: 12px;
+            text-align: right;
+            position: relative;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+            color: #555;
+            text-transform: uppercase;
+        }
+    }
+
+   .fifth {
+    background-color: #f5f0e8; /* Light cream background */
+    color: #222; /* Deep gray text */
+    padding: 80px 60px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.con_left {
+    flex: 1.5em;
+    min-width: 400px;
+}
+
+.con_left h1 {
+    font-size: 8em;
+    margin: 0;
+    line-height: 1;
+}
+
+.touch {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.touch h1 {
+    font-size: 8.5em;
+    margin: 0;
+    line-height: 1;
+}
+
+.touch img {
+    width: 150px;
+    height: auto;
+}
+
+.con_left p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.con_right {
+    flex: 1em;
+    min-width: 300px;
+    font-family: 'Lato', sans-serif;
+}
+
+.con_right p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.con_right h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.con_right a {
+    display: block;
+    color: #222;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.con_right a:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .con_left h1, .touch h1 {
+        font-size: 3em;
+    }
+}
+footer {
+    background-color: #f5f0e8;
+    padding: 40px 20px;
+    font-family: 'Lato', sans-serif;
+    color: #222;
+    border-top: 1px solid #ddd;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-left h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    gap: 25px;
+
+}
+
+.footer-center a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.footer-center a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 0.95em;
+}
+
+.footer-right p {
+    margin: 0 0 5px;
+}
+
+.footer-right small {
+    color: #555;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-center {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 6px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  gap: 12px;
+}
+
+.social-sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-sidebar a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.social-sidebar img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+</style>
+
+<body>
+    <div class="social-sidebar">
+  <a href="https://github.com/" target="_blank" title="GitHub">
+    <img src="./github-brands.svg" alt="GitHub" />
+  </a>
+  <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
+    <img src="./linkedin-in-brands.svg" alt="LinkedIn" />
+  </a>
+  <a href="https://instagram.com/" target="_blank" title="Instagram">
+    <img src="./instagram-brands.svg" alt="Instagram" />
+  </a>
+  <a href="https://facebook.com/" target="_blank" title="Facebook">
+    <img src="./facebook-brands.svg" alt="Facebook" />
+  </a>
+  <a href="https://x.com/" target="_blank" title="X">
+    <img src="./square-x-twitter-brands.svg" alt="X" />
+  </a>
+</div>
+
+
+
+
+
+    <header>
+        <nav>
+            <div class="left">
+                <ul>
+                    <li><a href="">Taha's Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <section class="first">
+            <div class="hero">
+                <div class="hero-first">
+                    <h1 bold> HEY I'M TAHA</h1>
+                </div>
+                <div class="hero-img"><img src="./WhatsApp_Image_2025-06-18_at_16.57.09_9b7695f2-removebg.png" alt="">
+                </div>
+                <div class="hero-second">
+                    <h1 bold>I AM A <span id="element"></span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="second">
+            <div class="About" data-aos="fade-up" data-aos-duration="1000">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis tempore consectetur error nihil
+                    voluptatem dolor et similique vitae itaque quasi id ea eaque atque at harum numquam voluptatum
+                    pariatur, placeat dolores ab cupiditate. Assumenda ea delectus provident, dolorem vero facere sint
+                    obcaecati voluptas ab blanditiis, omnis voluptates et recusandae officia incidunt vel magni tempore,
+                    necessitatibus modi? Fuga aliquam sint delectus, nihil, id, architecto aspernatur ipsam voluptatem
+                    at repudiandae consequuntur dicta mollitia facere! Architecto reprehenderit consequuntur possimus
+                    temporibus aliquam, dicta optio aperiam blanditiis nemo vitae fugiat quod laudantium. Harum,
+                    similique doloremque nulla, saepe illo totam maiores molestias quaerat iusto eum minus.</p>
+            </div>
+            <div class="work" data-aos="fade-up" data-aos-duration="1000">
+                <h1>Work Experience</h1>
+                <div class="green">
+                    <div class="comp_1" data-aos="fade-right" data-aos-duration="1200">
+                        <h1>Sales Executive</h1>
+                        <h2>ROVECTO</h2>
+                        <h5>25-November-2024 to 25-Feburary-2025</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat ut laboriosam!
+                            Molestiae ipsam vero consequuntur officia optio! Voluptatibus fuga delectus corrupti optio
+                            exercitationem soluta illo praesentium, ipsa minus in alias. Culpa autem iusto pariatur.</p>
+                    </div>
+                    <hr>
+                    <div class="comp_2" data-aos="fade-left" data-aos-duration="1200">
+                        <h1>Teacher</h1>
+                        <h2>FALCON RISING PUBLIC SCHOOL</h2>
+                        <h5>16-August-2024 to 20-November-2025</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat ut laboriosam!
+                            Molestiae ipsam vero consequuntur officia optio! Voluptatibus fuga delectus corrupti optio
+                            exercitationem soluta illo praesentium, ipsa minus in alias. Culpa autem iusto pariatur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="third" id="services" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+
+
+
+
+            <div class=" service-cards">
+                <h1>My Services</h1>
+                <div class="png_img">
+                    <img src="./web-design.png" alt="" data-aos="fade-right" data-aos-duration="1200">
+                    <hr>
+                    <div class="ser_content" data-aos="fade-left" data-aos-duration="1200">
+                        <h2>WEB Design</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sed quos eaque similique et
+                            excepturi libero corrupti fugit enim ipsum officiis quasi maxime, quaerat repudiandae
+                            voluptates, dolorem ipsa maiores fuga?</p>
+                    </div>
+                </div>
+                <div class="png_img">
+                    <div class="ser_content" data-aos="fade-right" data-aos-duration="1200">
+                        <h2>WEB Design</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sed quos eaque similique et
+                            excepturi libero corrupti fugit enim ipsum officiis quasi maxime, quaerat repudiandae
+                            voluptates, dolorem ipsa maiores fuga?</p>
+                    </div>
+                    <hr>
+                    <img src="./user-experience.png" alt="" data-aos="fade-left" data-aos-duration="1200">
+                </div>
+                <div class="png_img">
+                    <img src="./resume.png" alt="" data-aos="fade-right" data-aos-duration="1200">
+                    <hr>
+                    <div class="ser_content" data-aos="fade-left" data-aos-duration="1200">
+                        <h2>WEB Design</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sed quos eaque similique et
+                            excepturi libero corrupti fugit enim ipsum officiis quasi maxime, quaerat repudiandae
+                            voluptates, dolorem ipsa maiores fuga?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="four">
+            <div class="Projects"  data-aos="zoom-in">
+                <h1>Projects</h1>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>s.no</th>
+                                <th>Project Name</th>
+                                <th>links</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Zappos.com</td>
+                                <td><a href="/"><img src="./GitHub_(4).png" alt=""></a></td>
+                                <td>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim modi non
+                                        autem exercitationem dolorem!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Festivals.com</td>
+                                <td><a href="/"><img src="./GitHub_(4).png" alt=""></a></td>
+                                <td>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim modi non
+                                        autem exercitationem dolorem!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>To Do List</td>
+                                <td><a href="/"><img src="./GitHub_(4).png" alt=""></a></td>
+                                <td>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim modi non
+                                        autem exercitationem dolorem!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>Calculator</td>
+                                <td><a href="/"><img src="./GitHub_(4).png" alt=""></a></td>
+                                <td>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim modi non
+                                        autem exercitationem dolorem!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>Tic Tac Toe</td>
+                                <td><a href="/"><img src="./GitHub_(4).png" alt=""></a></td>
+                                <td>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim modi non
+                                        autem exercitationem dolorem!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>Tic Tac Toe</td>
+                                <td><a href="/"><img src="./GitHub_(4).png" alt=""></a></td>
+                                <td>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim modi non
+                                        autem exercitationem dolorem!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>Tic Tac Toe</td>
+                                <td><a href="/"><img src="./GitHub_(4).png" alt=""></a></td>
+                                <td>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, enim modi non
+                                        autem exercitationem dolorem!</p>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="fifth">
+            <div class="contact">
+                <div class="con_left"  data-aos="fade-right" data-aos-duration="1200">
+                    <h1>GET IN</h1>
+                    <div class="touch">
+                        <img src="./eye-removebg-preview.png" alt="">
+                        <h1>TOUCH</h1>
+                    </div>
+                    <p>tahahassanwork@gmail.com</p>
+                </div>
+                <div class="con_right"  data-aos="fade-left" data-aos-duration="1200">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quisquam, explicabo sequi
+                        exercitationem tempore nulla voluptate facere at aliquid atque, placeat officiis eum alias
+                        reiciendis aliquam consequatur est dicta velit magni aperiam! Adipisci, alias rerum!</p>
+                    <h3>social links</h3>
+                    <a href="">Linked In</a>
+                    <a href="">GitHub</a>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">X</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+  <div class="footer-left">
+    <h3>Taha Hassan</h3>
+    <p>Frontend Developer & Designer</p>
+  </div>
+  <div class="footer-center">
+     <a href="" download>Circulum Vitae</a> 
+  </div>
+  <div class="footer-right">
+    <p>hello@tahahassan.com</p>
+    <small>© 2025 Taha Hassan. All rights reserved.</small>
+  </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ["Front-End Developer", "Full Stack Developer", "Web Designer"],
+            typeSpeed: 50,
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+
+        const servicesSection = document.getElementById("services");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        document.body.classList.add("services-theme");
+                        document.body.classList.remove("default-theme");
+                    } else {
+                        document.body.classList.remove("services-theme");
+                        document.body.classList.add("default-theme");
+                    }
+                });
+            },
+            {
+                threshold: 0.5 // adjust how much should be visible before triggering
+            }
+        );
+
+        observer.observe(servicesSection);
+    </script>
+
+
+</body>
+
+</html>
